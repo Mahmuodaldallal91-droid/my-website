@@ -18,7 +18,7 @@ html,body{ margin:0; padding:0; background:var(--bg); color:var(--text); font-fa
   width:100%;
   height: clamp(170px, 22vw, 260px);
   object-fit: cover;
-  object-position: 0% center;
+  object-position: 20% center;
   display:block;
   transform: scale(1.10);
   transform-origin: left center;
