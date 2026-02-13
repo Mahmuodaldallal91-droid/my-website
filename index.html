@@ -1,583 +1,0 @@
-<!DOCTYPE html>
-
-<html dir="rtl" lang="ar">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
-<title>صفحة المنتج</title>
-<link href="style.css" rel="stylesheet"/>
-</head>
-<body>
-<!-- شاشة ترحيب لمدة ثانيتين -->
-<div aria-hidden="false" class="welcome-splash" id="welcomeSplash">
-<div class="welcome-splash__glow"></div>
-<div class="welcome-splash__card">
-<div class="welcome-splash__title">أهلاً وسهلاً بكم في مركز الارتقاء الطبي</div>
-<div class="welcome-splash__sub">نجهّز لك الصفحة…</div>
-<div aria-label="loading" class="welcome-splash__loader">
-<span></span><span></span><span></span>
-</div>
-</div>
-</div><script>(function(){try{const s=document.getElementById('welcomeSplash');if(!s)return;setTimeout(()=>{s.classList.add('hide');setTimeout(()=>{try{s.remove();}catch(e){}},500);},2000);}catch(e){}})();</script>
-<header class="site-header site-header--image" role="banner">
-<div class="site-header__frame">
-<img alt="مركز الارتقاء الطبي" class="site-header__banner" decoding="async" loading="eager" src="https://i.ibb.co/vCz962xp/Blue-Modern-Abstract-Company-Business-Card-1.jpg"/>
-<div aria-label="مركز معتمد" class="header-badge">مركز معتمد</div>
-</div>
-</header>
-<div class="container">
-<!-- سلايدر الصور + التقييم فوق الصورة -->
-<div class="hero">
-<div class="carousel" id="carousel">
-<div class="slides" id="slides">
-<div aria-label="صورة 1" class="imageSlide">
-<img alt="مركز الارتقاء الطبي - 1" decoding="async" loading="eager" src="assets/slider/m1.PNG"/>
-</div>
-<div aria-label="صورة 2" class="imageSlide">
-<img alt="مركز الارتقاء الطبي - 2" decoding="async" loading="lazy" src="assets/slider/s1.PNG"/>
-</div>
-<div aria-label="صورة 3" class="imageSlide">
-<img alt="مركز الارتقاء الطبي - 3" decoding="async" loading="lazy" src="assets/slider/t1.PNG"/>
-</div>
-<div aria-label="صورة 4" class="imageSlide">
-<img alt="مركز الارتقاء الطبي - 4" decoding="async" loading="lazy" src="assets/slider/a1.PNG"/>
-</div>
-</div>
-<div aria-hidden="true" class="slideProgress"><span class="bar" id="slideProgressBar"></span></div>
-<button aria-label="السابق" class="navArrow prev" id="prevSlide" type="button">‹</button><button aria-label="التالي" class="navArrow next" id="nextSlide" type="button">›</button><div class="dots" id="dots"><span class="dot active" data-i="0"></span><span class="dot" data-i="1"></span><span class="dot" data-i="2"></span><span class="dot" data-i="3"></span></div>
-<!-- تقييم فوق الصورة (Overlay) -->
-<div class="ratingOverlay" id="ratingOverlay">
-<span class="ratingValue" id="ratingValue">4.5</span>
-<div aria-label="التقييم" class="stars" id="stars">
-<button aria-label="نجمة 1" class="star" data-star="1" type="button">★</button>
-<button aria-label="نجمة 2" class="star" data-star="2" type="button">★</button>
-<button aria-label="نجمة 3" class="star" data-star="3" type="button">★</button>
-<button aria-label="نجمة 4" class="star" data-star="4" type="button">★</button>
-<button aria-label="نجمة 5" class="star" data-star="5" type="button">★</button>
-</div>
-</div>
-</div>
-<!-- عروض (24 ساعة) -->
-<div aria-label="عروض لمدة 24 ساعة" class="offers" id="offers">
-<div class="offersHeader">
-<div class="offersTitle">🔥 عروض لمدة 24 ساعة</div>
-<div class="offersTimer">ينتهي بعد: <span class="offerCountdown" id="offerCountdown">00:00:00</span></div>
-</div>
-<div class="offersGrid">
-<div class="offerCard" data-qty="1">
-<div class="offerTop">
-<div class="offerName">عبوة واحدة</div>
-<div class="offerBadge">شامل التوصيل</div>
-</div>
-<div class="offerPrice">200 شيكل</div>
-<div class="offerSub">ينتهي العرض بعد <span class="offerCountdown">00:00:00</span></div>
-</div>
-<div class="offerCard" data-qty="2">
-<div class="offerTop">
-<div class="offerName">عبوتين</div>
-<div class="offerBadge">أفضل قيمة</div>
-</div>
-<div class="offerPrice">300 شيكل</div>
-<div class="offerSub">ينتهي العرض بعد <span class="offerCountdown">00:00:00</span></div>
-</div>
-<div class="offerCard" data-qty="3">
-<div class="offerTop">
-<div class="offerName">ثلاث عبوات</div>
-<div class="offerBadge">الأكثر طلباً</div>
-</div>
-<div class="offerPrice">400 شيكل</div>
-<div class="offerSub">ينتهي العرض بعد <span class="offerCountdown">00:00:00</span></div>
-</div>
-</div>
-</div>
-<!-- الأزرار -->
-<div class="buttons">
-<!-- الصف الأول -->
-<button id="btnReviews" type="button">آراء العملاء</button>
-<button id="btnOrder" type="button">طلب المنتج</button>
-<button id="btnPrice" type="button">معلومات المنتج</button>
-<!-- الصف الثاني -->
-<button id="btnWarranty" type="button">من نحن</button>
-<button id="btnRefund" type="button">الضمان والاسترداد</button>
-<button id="btnPrivacy" type="button">الخصوصية</button>
-</div>
-<!-- صندوق النص -->
-<p class="output fade-in" id="output">اضغط زر لعرض التفاصيل</p>
-<!-- معلومات المنتج -->
-<div class="card hidden" id="productInfoSection">
-<h2 class="sectionTitle">معلومات المنتج</h2>
-<div class="infoBadges" id="infoBadges">
-<button class="infoBadge" data-text="    
-
-فوائد المنتج
-
-- يمنح انتصابًا قويًا جدًا ومستقرًا لفترة طويلة جدًا
-- يحقق تأخيرًا واضحًا وممتدًا في القذف بشكل ملحوظ
-- يعزز الثبات والقدرة على الاستمرار دون انخفاض في الأداء
-- يرفع مستوى الثقة بالنفس بشكل كبير أثناء العلاقة الزوجية
-- يزيد من الإشباع والرضا المتبادل للزوجين
-- يوفر طاقة وحيوية إضافية محسوسة على مدار الجلسة
-- يساعد على استعادة الشعور بالقوة والسيطرة الذاتية
-- يحسن جودة الانتصاب من حيث الصلابة والحجم الملحوظ
-- يقلل من القلق المرتبط بالأداء الجنسي
-- يدعم استمرارية الأداء العالي حتى في الظروف الصعبة
-- تركيبة آمنة تمامًا للاستخدام الخارجي الموضعي
-- يبدأ مفعوله بسرعة كبيرة ويستمر لفترة مرضية
-- يساهم في تحسين الانسجام والتوافق الزوجي العام
-
- " data-title="فوائد المنتج" type="button">فوائد المنتج</button>
-<button class="infoBadge" data-text="   
-
-طريقة الاستعمال –
-1. اغسل وجفف المنطقة جيدًا (مرة واحدة قبل أول استخدام فقط).
-2. دهن كمية صغيرة جدًا (حجم حبة بازلاء ).
-3. وزّعها برفق على كامل القضيب .
-4. انتظر بالضبط 15 دقيقة
-5. ابدأ مباشرة – بدون غسل إضافي.
-
-نقاط مهمة سريعة:
-- ابدأ بكمية قليلة جدًا في أول مرة.
-- للاستخدام الخارجي فقط.
-- إذا حسيت بأي تهيج (نادر جدًا) اغسلها فورًا بالماء.
-
- " data-title="طريقة الاستخدام" type="button">طريقة الاستخدام</button>
-<button class="infoBadge" data-text="يعتمد المنتج على تركيبة مختارة بعناية من الزيوت النباتية والمكوّنات ذات المنشأ الطبيعي، من ضمنها زيوت نبتة المتانا الفيتنامي، بما يوفّر تجربة استخدام مريحة ومتوازنة.
-
-معايير التركيبة:
-- مكوّنات طبيعية قائمة على زيوت نباتية مختارة
-- خالية من الإضافات الكيميائية القاسية قدر الإمكان وفق طبيعة التركيبة
-- تركيبة مصممة للاستخدام الموضعي وفق تعليمات الاستخدام
-- اهتمام بجودة المكوّنات وثباتها لتحقيق أفضل تجربة ممكنة" data-title="المكوّنات" type="button">المكوّنات</button>
-<button class="infoBadge" data-text="
-
-- مناسب للاستخدام لدى البالغين من جميع الفئات العمرية (18 سنة فما فوق).
-- يُعد خيارًا آمنًا ومناسبًا للأفراد الذين يعانون من أمراض مزمنة شائعة، ومنها:
-  - أمراض القلب والشرايين
-  - ارتفاع ضغط الدم
-  - داء السكري (النوع الأول والثاني)
-- لا يُسبب أي آثار جانبية معروفة أو مضاعفات صحية عند الاستخدام وفق التعليمات الموصى بها.
-- خالٍ تمامًا من المواد الكيميائية الاصطناعية الضارة، المواد الهرمونية، والمركبات الدوائية الممنوعة.
-- يعتمد على تركيبة طبيعية 100% مصممة خصيصًا للاستخدام الموضعي الخارجي.
-- لا يتداخل مع الأدوية المزمنة الشائعة (بما في ذلك أدوية القلب، الضغط، السكري، والسيولة).
-- لا يُمتص بشكل جهازي في الجسم، مما يقلل من احتمالية التأثير على وظائف الأعضاء الداخلية.
-- يتوافق مع معايير الاستخدام الآمن للمنتجات الموضعية المخصصة للرجال البالغين.
-
- " data-title="لمن يناسب؟" type="button">لمن يناسب؟</button>
-<button class="infoBadge" data-text="تحذير 
-
-- البدء الفعلي للتأثير: يبدأ المفعول تدريجيًا خلال 10 إلى 20 دقيقة من وضع المنتج بشكل صحيح على المنطقة المستهدفة.
-- الوقت الأمثل للانتظار الموصى به: 15 دقيقة بالضبط (هذا الوقت هو المتوسط الأكثر شيوعًا والأكثر فعالية لدى معظم المستخدمين).
-- الوصول إلى الذروة الكاملة للتأثير: يصل التأثير إلى أقصى درجاته عادةً بين 15 و25 دقيقة بعد الوضع، حيث يصبح:
-  - الانتصاب أكثر صلابة وثباتًا
-  - القدرة على التحكم في التوقيت ترتفع بشكل واضح
-- مدة استمرار التأثير الفعال: يستمر التأثير الرئيسي (التأخير + الثبات) لمدة 30 إلى 60 دقيقة تقريبًا بعد بدء العلاقة، وقد يمتد أكثر في بعض الحالات حسب:
-  - كمية المنتج المستخدمة
-  - درجة الحساسية الشخصية
-  - مستوى الإثارة والحالة النفسية
-- التدرج الزمني المتوقع (ملخص زمني):
-  - 0–5 دقائق: امتصاص أولي – لا تأثير واضح بعد
-  - 5–10 دقائق: بداية خفيفة للتهدئة الموضعية
-  - 10–15 دقيقة: تحسن ملحوظ في الصلابة والتحكم
-  - 15–25 دقيقة: الذروة – أفضل أداء (الوقت المثالي للبدء)
-  - بعد 25 دقيقة: التأثير يبقى قويًا لفترة طويلة
-- ملاحظات هامة للحصول على أفضل النتائج:
-  - الالتزام بالانتظار 15 دقيقة يُعتبر النقطة المثالية لمعظم الرجال
-  - تجنب الانتظار أكثر من 20–25 دقيقة في البداية لتجنب انخفاض الإحساس بشكل زائد
-  - النتائج تكون أفضل مع الاسترخاء النفسي والإثارة الطبيعية
-
-الخلاصة الرسمية:
-يبدأ مفعول المنتج خلال 10–20 دقيقة، ويصل إلى أفضل أدائه عند 15 دقيقة تقريبًا، مما يتيح انتصابًا قويًا وثابتًا مع تحكم ممتاز في التوقيت لفترة مرضية وممتدة." data-title="متى يبدأ المفعول؟" type="button">متى يبدأ المفعول؟</button>
-<button class="infoBadge" data-text="لأفضل تجربة، يُفضّل الالتزام بتعليمات الاستعمال بدقّة، واستخدام كمية مناسبة دون إفراط، مع مراعاة أن الانتظام والالتزام بالطريقة الصحيحة ينعكسان بشكل مباشر على جودة التجربة.
-
-قبل الاستخدام:
-- التأكد من نظافة وجفاف موضع الاستخدام
-- يُفضّل البدء بكمية بسيطة ثم زيادتها تدريجيًا عند الحاجة
-- قراءة تعليمات الاستخدام المرفقة بالكامل قبل البدء
-
-أثناء الاستخدام:
-- تطبيق المنتج بلطف وبشكل متساوٍ وفق الإرشادات
-- تجنّب الاستخدام المفرط أو المتكرر خلال فترة قصيرة
-- في حال الإحساس بعدم ارتياح، يتم التوقف وإعادة التقييم" data-title="إرشادات مهمة" type="button">إرشادات مهمة</button>
-<button class="infoBadge" data-text="لضمان ثبات التركيبة والحفاظ على الجودة لأطول فترة ممكنة، يُنصح باتباع الإرشادات التالية عند التخزين:
-
-- يُحفظ في مكان جاف وبارد نسبيًا بعيدًا عن أشعة الشمس المباشرة ومصادر الحرارة مثل السخان أو قرب النوافذ.
-- يُفضّل وضعه في مكان ثابت بدرجة حرارة معتدلة، وتجنّب تعريضه للتقلّبات الكبيرة في الحرارة.
-- بعد كل استخدام، يتم إغلاق العبوة بإحكام لمنع دخول الهواء أو الرطوبة والحفاظ على قوام المنتج وثباته.
-- يُنصح بعدم ترك العبوة مفتوحة لفترة طويلة، وعدم نقل المحتوى إلى عبوات أخرى غير مخصصة له.
-- يُحفظ بعيدًا عن متناول الأطفال، وفي مكان بعيد عن الأدوات الحادة أو مصادر الانسكاب." data-title="التخزين" type="button">التخزين</button>
-<button class="infoBadge" data-text="نلتزم بتقديم تغليف سري ومحترم يحافظ على خصوصيتك من لحظة تجهيز الطلب وحتى استلامه. يتم تجهيز الشحنة داخل عبوة خارجية غير شفافة وبمظهر اعتيادي لا يلفت الانتباه.
-
-ماذا يعني تغليف سري؟
-- لا يتم ذكر اسم المنتج أو طبيعته على الغلاف الخارجي
-- بيانات الشحنة تُعرض بصيغة ضرورية للتسليم فقط
-- شحنة مرتّبة بإغلاق محكم لضمان الأمان أثناء النقل
-
-خصوصيتك أولوية لدينا." data-title="التغليف السري" type="button">التغليف السري</button>
-</div>
-<div aria-live="polite" class="infoPanel" id="infoPanel">
-<div class="infoPanelInner">
-<div class="infoPanelTitle" id="infoPanelTitle">فوائد المنتج</div>
-<div class="infoPanelText" id="infoPanelText">تحذير هام المنتج غير مخصص للانتصاب او سرعة القذف كل من يروج التالي فهو كاذب
-
-فوائد المنتج
-
-- يمنح انتصابًا قويًا جدًا ومستقرًا لفترة طويلة جدًا
-- يحقق تأخيرًا واضحًا وممتدًا في القذف بشكل ملحوظ
-- يعزز الثبات والقدرة على الاستمرار دون انخفاض في الأداء
-- يرفع مستوى الثقة بالنفس بشكل كبير أثناء العلاقة الزوجية
-- يزيد من الإشباع والرضا المتبادل للزوجين
-- يوفر طاقة وحيوية إضافية محسوسة على مدار الجلسة
-- يساعد على استعادة الشعور بالقوة والسيطرة الذاتية
-- يحسن جودة الانتصاب من حيث الصلابة والحجم الملحوظ
-- يقلل من القلق المرتبط بالأداء الجنسي
-- يدعم استمرارية الأداء العالي حتى في الظروف الصعبة
-- تركيبة آمنة تمامًا للاستخدام الخارجي الموضعي
-- يبدأ مفعوله بسرعة كبيرة ويستمر لفترة مرضية
-- يساهم في تحسين الانسجام والتوافق الزوجي العام
-
-هذا ادعاء غير صحيح الرجاء الحذر</div>
-</div>
-</div>
-<div class="policyLinksRow" id="policyLinksRow">
-<button class="policyLinkBtn" id="policyLinkWarranty" type="button">سياسة الضمان والاسترداد</button>
-<button class="policyLinkBtn" id="policyLinkPrivacy" type="button">سياسة الخصوصية</button>
-</div>
-</div>
-<!-- آراء العملاء -->
-<div class="card hidden" id="reviewsSection">
-<h2 class="sectionTitle">آراء العملاء</h2>
-<p class="demoNote"> </p>
-<!-- قائمة آراء وهمية -->
-<div class="reviewsList" id="reviewsList"></div>
-<button class="loadMoreBtn loadMoreBtnModern" id="loadMoreReviewsBtn" type="button"><span class="lm-text">عرض المزيد</span><span class="lm-meta"></span><span aria-hidden="true" class="lm-spinner"></span><span aria-hidden="true" class="lm-icon">⌄</span></button>
-<!-- Sentinel for auto-load (Option C) -->
-<div aria-hidden="true" class="reviewsSentinel" id="reviewsSentinel"></div>
-<div class="divider"></div>
-<!-- إضافة تعليق -->
-<!-- ✅ إضافة: قم بالتقييم قبل التعليق -->
-<div id="commentFormWrap"><h3 class="miniTitle">أضف رأيك</h3><div class="rateBeforeComment">
-<div class="rateLabel">قم بالتقييم قبل التعليق</div>
-<div aria-label="تقييم قبل التعليق" class="miniStars" id="miniStars">
-<button aria-label="نجمة 1" class="miniStar" data-star="1" type="button">★</button>
-<button aria-label="نجمة 2" class="miniStar" data-star="2" type="button">★</button>
-<button aria-label="نجمة 3" class="miniStar" data-star="3" type="button">★</button>
-<button aria-label="نجمة 4" class="miniStar" data-star="4" type="button">★</button>
-<button aria-label="نجمة 5" class="miniStar" data-star="5" type="button">★</button>
-</div>
-</div><input id="commentName" placeholder="الاسم" type="text"/><textarea id="replyText" placeholder="اكتب رأيك هنا..." rows="3"></textarea><button class="submitBtn" id="sendReply" type="button">إرسال</button></div></div><div class="card hidden" id="warrantyRefundSection"><h2 class="sectionTitle">الضمان والاسترداد</h2>
-<div class="wrModern" id="wrModern">
-<div class="wrTop">
-<p class="wrLead">نوضح لك كل ما يخص الضمان والاسترداد بكل شفافية.</p>
-<div aria-label="مميزات القسم" class="wrBadges">
-<span class="wrBadge">واضح ومباشر</span>
-<span class="wrBadge">دعم سريع</span>
-<span class="wrBadge">حقك محفوظ</span>
-</div>
-</div>
-<div class="wrGrid">
-<section aria-label="الضمان" class="wrCard">
-<div class="wrCardHead">
-<h3 class="wrCardTitle">الضمان</h3>
-<span aria-hidden="true" class="wrCardIcon">✅</span>
-</div>
-<div class="wrBlock">
-<p>يؤكد مركز الارتقاء الطبي التزامه بمعايير الجودة ورضا العملاء، ويقدّم ضمانًا خدميًا يشمل الدعم الفني والإرشادي والمتابعة وفق السياسة المعتمدة لدى المركز.</p>
-<p>في حال عدم ملاحظة نتيجة خلال 15 دقيقة من الاستخدام الصحيح، يُرجى التواصل فورًا مع فريق الدعم المختص لإجراء مراجعة إجرائية لطريقة الاستخدام وتقديم الإرشادات اللازمة لضمان أفضل استفادة.</p>
-</div>
-<div class="wrSub">
-<h4 class="wrSubTitle">نطاق الضمان</h4>
-<ul class="termsList">
-<li>تقديم الإرشادات الفنية المعتمدة لطريقة الاستخدام الصحيحة.</li>
-<li>متابعة الحالة والإجابة عن الاستفسارات المتعلقة بالاستخدام.</li>
-<li>توجيه العميل للخطوة الأنسب وفق تقييم فريق الدعم.</li>
-</ul>
-</div>
-<div class="wrSub">
-<h4 class="wrSubTitle">استثناءات الضمان</h4>
-<ul class="termsList">
-<li>عدم الالتزام بإرشادات الاستخدام أو الاستخدام غير الصحيح.</li>
-<li>الاستخدام المفرط أو بما يخالف الغرض المخصص.</li>
-<li>أي ضرر ناتج عن سوء الاستخدام أو سوء التخزين أو العبث بالمنتج.</li>
-</ul>
-</div>
-</section>
-<section aria-label="الاسترداد" class="wrCard">
-<div class="wrCardHead">
-<h3 class="wrCardTitle">الاسترداد</h3>
-<span aria-hidden="true" class="wrCardIcon">↩️</span>
-</div>
-<div class="wrSub">
-<h4 class="wrSubTitle">سياسة الاسترداد</h4>
-<p>تُتاح إمكانية تقديم طلب الاسترداد خلال <b>72 ساعة</b> من استلام المنتج، وذلك وفق الشروط التالية:</p>
-<ol class="termsList numbered">
-<li>أن يكون المنتج قد استُخدم مرة أو مرتين فقط وبشكل غير مفرط.</li>
-<li>تقديم سبب واضح لطلب الاسترداد.</li>
-<li>إرفاق صورة واضحة للمنتج عند تقديم الطلب (حسب ما يطلبه النموذج).</li>
-</ol>
-</div>
-<div class="wrTwoCols">
-<div class="wrSub">
-<h4 class="wrSubTitle">آلية الاسترداد</h4>
-<ul class="termsList">
-<li>يتم استرداد قيمة المنتج كاملة.</li>
-<li>لا تشمل عملية الاسترداد تكلفة التوصيل.</li>
-</ul>
-</div>
-<div class="wrSub">
-<h4 class="wrSubTitle">حالات عدم الأهلية للاسترداد</h4>
-<ul class="termsList">
-<li>تجاوز مدة 72 ساعة من الاستلام.</li>
-<li>ثبوت الاستخدام المفرط أو غير المتوافق مع الإرشادات.</li>
-<li>عدم إرفاق المستندات/الصور المطلوبة أو عدم وضوحها بشكل يمنع التحقق.</li>
-</ul>
-</div>
-</div>
-<div class="wrSub">
-<h4 class="wrSubTitle">إجراءات تقديم الطلب</h4>
-<ul class="termsList">
-<li>تعبئة نموذج الاسترداد بدقة (الاسم، رقم الهاتف، السبب، وإرفاق الصورة).</li>
-<li>يقوم فريق الدعم بمراجعة الطلب وفق السياسة المعتمدة.</li>
-<li>يتم التواصل مع العميل بالنتيجة والإجراء التالي.</li>
-</ul>
-</div>
-</section>
-</div>
-<div aria-label="خطوات الاسترداد" class="wrSteps">
-<div class="wrStep"><span class="wrStepNum">1</span><span class="wrStepTxt">تعبئة الطلب</span></div>
-<div class="wrStep"><span class="wrStepNum">2</span><span class="wrStepTxt">إرفاق المطلوب</span></div>
-<div class="wrStep"><span class="wrStepNum">3</span><span class="wrStepTxt">مراجعة الطلب</span></div>
-<div class="wrStep"><span class="wrStepNum">4</span><span class="wrStepTxt">تأكيد الإجراء</span></div>
-</div>
-<section aria-label="نموذج طلب الاسترداد" class="wrCard wrFormCard" id="refundFormCard">
-<div class="wrCardHead">
-<h3 class="wrCardTitle">نموذج طلب الاسترداد</h3>
-<span aria-hidden="true" class="wrCardIcon">📝</span>
-</div>
-<div class="wrBlock">
-<form autocomplete="on" class="refundForm" id="refundForm">
-<div class="formRow">
-<input id="refundName" placeholder="اسم العميل" type="text"/>
-<input id="refundPhone" inputmode="numeric" placeholder="رقم العميل" type="tel"/>
-</div>
-<textarea id="refundReason" placeholder="سبب الاسترداد" rows="3"></textarea>
-<div class="fileField">
-<span>إرفاق صورة للمنتج</span>
-<input accept="image/*" id="refundPhoto" type="file"/>
-</div>
-<button class="submitBtn" id="submitRefund" type="button">إرسال طلب الاسترداد</button>
-</form>
-</div>
-</section>
-<section aria-label="التواصل" class="wrCard">
-<div class="wrCardHead">
-<h3 class="wrCardTitle">التواصل</h3>
-<span aria-hidden="true" class="wrCardIcon">💬</span>
-</div>
-<div class="wrBlock">
-<p>للتواصل مع مركز الارتقاء الطبي عبر واتساب:</p>
-<a class="waLink" href="https://wa.me/97293760025" rel="noopener" target="_blank">اضغط هنا</a>
-<div aria-hidden="true" class="termsPhone">+972 9-376-0025</div>
-</div>
-</section>
-</div>
-</div>
-<div class="card hidden" id="privacySection">
-<h2 class="sectionTitle">الخصوصية</h2>
-<p class="aboutText">نحن نحترم خصوصيتك، خاصة في الطلبات الحساسة، ونلتزم بتغليف محايد وتواصل مختصر وحماية بياناتك.</p>
-<div aria-label="تفاصيل الخصوصية" class="accordion">
-<div class="accItem">
-<button class="accHeader" type="button">
-<span>خصوصية الطلبات الحساسة</span>
-<span class="accArrow">▾</span>
-</button>
-<div class="accBody">
-<ul class="termsList">
-<li><strong>تغليف سري ومحكم:</strong> تغليف غير شفاف دون أي إشارات واضحة لمحتوى المنتج.</li>
-<li><strong>اسم محايد على الطرد:</strong> وصف عام/محايد دون ذكر تفاصيل حساسة.</li>
-<li><strong>التواصل بخصوصية:</strong> التواصل فقط لتأكيد الطلب والتوصيل، دون ذكر تفاصيل المنتج إلا عند الحاجة وباختصار.</li>
-<li><strong>مشاركة للضرورة:</strong> مشاركة المعلومات فقط مع جهة التوصيل بالقدر اللازم لإتمام التسليم.</li>
-<li><strong>فاتورة محايدة:</strong> صياغة عامة لا تُظهر تفاصيل حساسة عند وجود فاتورة.</li>
-<li><strong>وقت مناسب للتسليم:</strong> يمكنك كتابة ملاحظة لتحديد وقت أو طريقة تسليم مناسبة لخصوصيتك.</li>
-</ul>
-<p class="orderPrivacyNote">ℹ️ ملاحظة: اكتب في ملاحظات الطلب <strong>“تغليف سري”</strong> لخصوصية أعلى.</p>
-</div>
-</div>
-<div class="accItem">
-<button class="accHeader" type="button">
-<span>البيانات التي نجمعها ولماذا</span>
-<span class="accArrow">▾</span>
-</button>
-<div class="accBody">
-<p>نجمع بيانات أساسية مثل الاسم ورقم الهاتف والعنوان وتفاصيل الطلب بهدف تأكيد الطلب، تنظيم التوصيل، وخدمة العملاء عند الحاجة.</p>
-</div>
-</div>
-<div class="accItem">
-<button class="accHeader" type="button">
-<span>مشاركة البيانات</span>
-<span class="accArrow">▾</span>
-</button>
-<div class="accBody">
-<p>لا نقوم ببيع بياناتك. قد نشارك الحد الأدنى من البيانات مع جهة التوصيل فقط لإتمام عملية التسليم.</p>
-</div>
-</div>
-</div>
-<a class="privacyWaBtn" href="https://wa.me/97293760025" rel="noopener" target="_blank">مراسلة واتساب</a>
-</div>
-<div class="card hidden" id="aboutSection"><h2 class="sectionTitle">من نحن</h2>
-<div aria-label="معلومات عن مركز الارتقاء الطبي" class="aboutPack">
-<p class="aboutIntro">
-<strong>مركز الارتقاء الطبي</strong><br/>
-    نقدّم خدمات ومنتجات تهدف لتحسين تجربة العميل، مع دعم وإرشاد واضح واهتمام بجودة الخدمة ورضا العملاء.
-  </p>
-<div aria-label="قيمنا" class="aboutBadges">
-<span class="aBadge">الشفافية</span>
-<span class="aBadge">المسؤولية</span>
-<span class="aBadge">الخصوصية</span>
-<span class="aBadge">الجودة</span>
-<span class="aBadge">الإنسانية</span>
-</div>
-<div aria-label="معلومات قابلة للفتح" class="aboutAcc">
-<button aria-expanded="false" class="aboutAccH" type="button">
-      رؤيتنا <span aria-hidden="true" class="accArrow">▾</span>
-</button>
-<div aria-hidden="true" class="aboutAccB">
-<p>أن يكون مركز الارتقاء الطبي مرجعًا موثوقًا في تقديم خدمات الرعاية والمتابعة وفق معايير تنظيم وجودة ثابتة، مع تطوير مستمر يواكب احتياجات العملاء.</p>
-</div>
-<button aria-expanded="false" class="aboutAccH" type="button">
-      رسالتنا <span aria-hidden="true" class="accArrow">▾</span>
-</button>
-<div aria-hidden="true" class="aboutAccB">
-<p>تقديم خدمات تتسم بالمهنية والوضوح واحترام الخصوصية، عبر مسار منظم يبدأ بالتواصل والتقييم وينتهي بدعم ومتابعة تساعد على رضا العميل.</p>
-</div>
-<button aria-expanded="false" class="aboutAccH" type="button">
-      نهج العمل <span aria-hidden="true" class="accArrow">▾</span>
-</button>
-<div aria-hidden="true" class="aboutAccB">
-<p>نعتمد خطوات واضحة للتعامل مع الطلبات والاستفسارات: توجيه مناسب، متابعة منظمة، وتواصل مختصر يحافظ على الخصوصية ويضمن وضوح المعلومات.</p>
-</div>
-</div>
-<div aria-label="مواقعنا" class="aboutLocations">
-<div class="aboutLocationsTitle">مواقعنا</div>
-<div class="aboutLocGrid">
-<div class="locItem">القدس – بيت حنينا</div>
-<div class="locItem">الإمارات – أبو ظبي</div>
-<div class="locItem">قطر – الدوحة</div>
-<div class="locItem">السعودية – الرياض</div>
-<div class="locItem">الولايات المتحدة – نيويورك</div>
-</div>
-</div>
-<a class="aboutWaBtn" href="https://wa.me/97293760025" rel="noopener" target="_blank">مراسلة واتساب</a>
-</div></div>
-<!-- نموذج الطلب -->
-<div class="form hidden" id="orderForm">
-<h2>الطلب</h2>
-<!-- شريط معلومات قبل نموذج الطلب -->
-<div aria-label="معلومات قبل نموذج الطلب" class="orderTopBlock">
-<div aria-label="شارات الثقة" class="orderTrustBadges">
-<span class="orderBadge">✅ ضمان واسترداد</span>
-<span class="orderBadge">🚚 شحن سريع</span>
-<span class="orderBadge">🔒 بياناتك محفوظة</span>
-</div>
-<div aria-label="خطوات الطلب" class="orderSteps">
-<div class="orderStep"><span class="orderStepNum">1</span><span class="orderStepTxt">اكتب بياناتك</span></div>
-<div class="orderStep"><span class="orderStepNum">2</span><span class="orderStepTxt">نراجع الطلب</span></div>
-<div class="orderStep"><span class="orderStepNum">3</span><span class="orderStepTxt">نتواصل لتأكيده</span></div>
-</div>
-</div>
-<!-- خصوصية الطلب (خفيف) -->
-<div aria-label="خصوصية الطلب" class="orderPrivacyCard">
-<div class="orderPrivacyHead">
-<div class="orderPrivacyTitle">🔒 خصوصية الطلب</div>
-<div class="orderPrivacySub">تغليف سري ومحايد للطلبات الحساسة.</div>
-</div>
-<div class="orderPrivacyQuick">
-<span class="opTag">🔒 تغليف غير شفاف</span>
-<span class="opTag">🧾 وصف محايد</span>
-<span class="opTag">📞 تواصل مختصر</span>
-</div>
-<button aria-expanded="false" class="orderPrivacyToggle" type="button">
-    عرض التفاصيل <span class="opChevron">▾</span>
-</button>
-<div aria-hidden="true" class="orderPrivacyMore">
-<div class="orderPrivacyMoreGrid">
-<span class="opTag">🚚 مشاركة للضرورة فقط</span>
-<span class="opTag">📄 فاتورة بصياغة عامة</span>
-<span class="opTag">⏰ وقت تسليم مناسب</span>
-</div>
-<div class="orderPrivacyNote">ℹ️ ملاحظة: اكتب في ملاحظات الطلب <strong>“تغليف سري”</strong> لخصوصية أعلى.</div>
-</div>
-</div>
-<input id="name" placeholder="الاسم" type="text"/>
-<input id="phone" inputmode="numeric" placeholder="رقم الهاتف" type="tel"/>
-<div class="phoneHint">تأكد من رقمك لتأكيد الطلب.</div>
-<div class="formRow">
-<select id="country">
-<option disabled="" value="">الدولة</option>
-<option selected="">اسرائيل</option>
-<option>فلسطين</option>
-<option>الولايات المتحدة</option>
-<option>الامارات</option>
-<option>قطر</option>
-<option>الكويت</option>
-<option>اسبانيا</option>
-</select>
-<input id="city" placeholder="المدينة" type="text"/>
-</div>
-<input id="address" placeholder="العنوان التفصيلي" type="text"/>
-<div class="formRow">
-<select id="pay">
-<option value="cash">الدفع عند الاستلام</option>
-<option value="card">بطاقة</option>
-</select>
-<select aria-label="الكمية" id="qty">
-<option disabled="" selected="" value="">الكمية</option>
-<option value="1">1</option>
-<option value="2">2</option>
-<option value="3">3</option>
-</select>
-</div>
-<div class="priceHint hidden" id="priceHint"></div>
-<div class="formRow">
-<textarea class="orderNotes" id="orderNotes" placeholder="ملاحظات (اختياري)" rows="3"></textarea>
-</div>
-<button class="submitBtn" id="submitOrder" type="button">إرسال الطلب</button>
-<div class="policyLink">
-<a class="policyAnchor" href="#warrantyRefundSection">سياسة الضمان والاسترداد</a>
-</div>
-</div>
-</div>
-<!-- نافذة منبثقة عامة -->
-<div aria-hidden="true" class="modal hidden" id="modal">
-<div aria-modal="true" class="modalBox" role="dialog">
-<div class="modalTitle">⭐</div>
-<div class="modalText">...</div>
-<button class="modalBtn" id="modalOk" type="button">حسناً</button>
-</div>
-</div>
-<!-- لودينغ قبل ظهور النافذة -->
-<div aria-hidden="true" class="loading hidden" id="loading">
-<div aria-label="جاري التحميل" class="spinner"></div>
-</div>
-<!-- إرسال الطلب إلى الإيميل (مخفي) عبر FormSubmit -->
-<iframe aria-hidden="true" id="orderEmailIframe" name="order_email_iframe" style="display:none"></iframe>
-<form action="https://formsubmit.co/mahmuod.aldallal91@icloud.com" id="orderEmailForm" method="POST" style="display:none" target="order_email_iframe">
-<input id="fs_subject" name="_subject" type="hidden" value="طلب جديد من الموقع"/>
-<input name="_template" type="hidden" value="table"/>
-<input name="_captcha" type="hidden" value="false"/>
-<input name="_next" type="hidden" value="about:blank"/>
-<input id="fs_name" name="الاسم" type="hidden"/>
-<input id="fs_phone" name="الهاتف" type="hidden"/>
-<input id="fs_country" name="الدولة" type="hidden"/>
-<input id="fs_city" name="المدينة" type="hidden"/>
-<input id="fs_address" name="العنوان" type="hidden"/>
-<input id="fs_qty" name="الكمية" type="hidden"/>
-<input id="fs_pay" name="الدفع" type="hidden"/>
-<input id="fs_notes" name="ملاحظات" type="hidden"/>
-<input id="fs_time" name="وقت الإرسال" type="hidden"/>
-</form>
-<!-- Loading (يظهر قبل المودال) -->
-<script defer="" src="script.js"></script>
-</div>
-<footer class="siteFooter">جميع الحقوق محفوظة لدى مركز الارتقاء الطبي</footer>
-</body>
-</html>
