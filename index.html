@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Medical Elevation Center</title>
+  <link rel="preload" as="image" href="assets/slider/h1.jpeg">
+  <link rel="stylesheet" href="style.css?v=11">
+</head>
+<body>
+  <header class="heroHeader" role="banner">
+    <img class="heroHeader__img" src="assets/slider/h1.jpeg" alt="Medical Elevation Center header">
+    <div class="heroHeader__fade" aria-hidden="true"></div>
+  </header>
+
+  <nav class="langbar" aria-label="Language selector">
+    <button class="langchip is-active" data-lang="ar" aria-pressed="true">عربي</button>
+    <button class="langchip" data-lang="en" aria-pressed="false">English</button>
+    <button class="langchip" data-lang="he" aria-pressed="false">עברית</button>
+  </nav>
+
+  <main class="page">
+        <div class="productHead">
+      <h1 class="productTitle" data-i18n="productName">منتج رايز</h1>
+
+      <div class="ratingPill" aria-label="Product rating">
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <span class="ratingNum">4.8</span>
+        <span class="ratingText" data-i18n="ratingText">تقييم المنتج</span>
+      </div>
+    </div>
+
+    <div class="rateBox" aria-label="User rating">
+      <div class="rateTitle" data-i18n="rateTitle">قيّم المنتج</div>
+
+      <div class="starsInput" id="starsInput" aria-label="Rate this product">
+        <button type="button" class="star" data-v="1" aria-label="1 star">★</button>
+        <button type="button" class="star" data-v="2" aria-label="2 stars">★</button>
+        <button type="button" class="star" data-v="3" aria-label="3 stars">★</button>
+        <button type="button" class="star" data-v="4" aria-label="4 stars">★</button>
+        <button type="button" class="star" data-v="5" aria-label="5 stars">★</button>
+      </div>
+
+      <button class="rateSend" id="rateSend" type="button" data-i18n="rateSend">إرسال التقييم</button>
+      <div class="rateMsg" id="rateMsg" aria-live="polite"></div>
+    </div>
+
+    <section class="slider" aria-label="Image slider">
+      <div class="slider__frame" id="sliderFrame">
+        <div class="slider__track" id="sliderTrack"></div>
+
+        <button class="slider__nav slider__prev" id="prevBtn" aria-label="Previous image">‹</button>
+        <button class="slider__nav slider__next" id="nextBtn" aria-label="Next image">›</button>
+
+        <div class="slider__dots" id="dots" aria-label="Slider pagination"></div>
+      </div>
+
+      <div class="slider__thumbs" id="thumbs" aria-label="Thumbnails"></div>
+      <p class="hint" data-i18n="tapToZoom">اضغط على الصورة للتكبير</p>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox__backdrop" id="lbBackdrop"></div>
+
+    <div class="lightbox__panel" role="dialog" aria-modal="true" aria-label="Image viewer">
+      <button class="lightbox__close" id="lbClose" aria-label="Close">×</button>
+
+      <div class="lightbox__stage" id="lbStage">
+        <div class="lightbox__zoom">
+          <img id="lbImg" alt="" />
+        </div>
+      </div>
+
+      <div class="lightbox__thumbs" id="lbThumbs" aria-label="Viewer thumbnails"></div>
+    </div>
+  </div>
+
+  <script src="script.js?v=11" defer></script>
+</body>
+</html>
