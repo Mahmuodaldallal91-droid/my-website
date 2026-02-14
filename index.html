@@ -1,196 +1,0 @@
-<!DOCTYPE html>
-
-<html dir="rtl" lang="ar">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
-<title>Medical Elevation Center</title>
-<link as="image" href="assets/slider/h1.jpeg" rel="preload"/>
-<link href="style.css?v=11" rel="stylesheet"/>
-</head>
-<body>
-<header class="heroHeader" role="banner">
-<img alt="Medical Elevation Center header" class="heroHeader__img" src="assets/slider/h1.jpeg"/>
-<div aria-hidden="true" class="heroHeader__fade"></div>
-</header>
-<nav aria-label="Language selector" class="langbar">
-<button aria-pressed="true" class="langchip is-active" data-lang="ar">عربي</button>
-<button aria-pressed="false" class="langchip" data-lang="en">English</button>
-<button aria-pressed="false" class="langchip" data-lang="he">עברית</button>
-</nav>
-<main class="page">
-<h1 class="pageTitle" data-i18n="title">مركز الارتقاء الطبي</h1>
-<p class="pageText" data-i18n="subtitle">رعاية طبية حديثة بثقة وخصوصية.</p>
-<section aria-label="Image slider" class="slider">
-<div class="slider__frame" id="sliderFrame">
-<div class="slider__track" id="sliderTrack"></div>
-<!-- Rating overlay (top-right) -->
-<div aria-label="Rate product" class="srRate" data-avg="4.5" id="srRate">
-<button aria-label="1 star" class="srStar" data-v="1" type="button">
-<span aria-hidden="true" class="starIcon">
-<svg class="starBase" viewbox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z"></path></svg>
-<svg class="starFill" viewbox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z"></path></svg>
-</span>
-</button>
-<button aria-label="2 stars" class="srStar" data-v="2" type="button">
-<span aria-hidden="true" class="starIcon">
-<svg class="starBase" viewbox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z"></path></svg>
-<svg class="starFill" viewbox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z"></path></svg>
-</span>
-</button>
-<button aria-label="3 stars" class="srStar" data-v="3" type="button">
-<span aria-hidden="true" class="starIcon">
-<svg class="starBase" viewbox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z"></path></svg>
-<svg class="starFill" viewbox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z"></path></svg>
-</span>
-</button>
-<button aria-label="4 stars" class="srStar" data-v="4" type="button">
-<span aria-hidden="true" class="starIcon">
-<svg class="starBase" viewbox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z"></path></svg>
-<svg class="starFill" viewbox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z"></path></svg>
-</span>
-</button>
-<button aria-label="5 stars" class="srStar" data-v="5" type="button">
-<span aria-hidden="true" class="starIcon">
-<svg class="starBase" viewbox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z"></path></svg>
-<svg class="starFill" viewbox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z"></path></svg>
-</span>
-</button>
-<span aria-label="Average rating" class="srAvg">4.5</span>
-</div>
-<button aria-label="Previous image" class="slider__nav slider__prev" id="prevBtn">‹</button>
-<button aria-label="Next image" class="slider__nav slider__next" id="nextBtn">›</button>
-<div aria-label="Slider pagination" class="slider__dots" id="dots"></div>
-</div>
-<div aria-label="Thumbnails" class="slider__thumbs" id="thumbs"></div>
-<div aria-label="Highlights" class="sliderBadges">
-<span class="badgePill"><span aria-hidden="true" class="badgeIcon badgeIcon--cod">💵</span><span data-i18n="badgeCod">الدفع عند الاستلام</span></span>
-<span class="badgePill"><span aria-hidden="true" class="badgeIcon badgeIcon--privacy">🔒</span><span data-i18n="badgePrivacy">خصوصية تامة</span></span>
-<span class="badgePill"><span aria-hidden="true" class="badgeIcon badgeIcon--guarantee">🛡️</span><span data-i18n="badgeGuarantee">ضمان واسترداد</span></span>
-</div>
-<div aria-label="Quick actions" class="actionRow"><button class="aBtn is-active" data-i18n="btnReviews" data-scroll="#reviews" type="button">آراء العملاء</button><button class="aBtn" data-i18n="btnUsage" data-scroll="#usage" type="button">طريقة الاستخدام</button><button class="aBtn" data-i18n="btnBenefits" data-scroll="#benefits" type="button">فوائد المنتج</button><button class="aBtn" data-i18n="btnSuitable" data-scroll="#suitable" type="button">لمن يناسب؟</button><button class="aBtn" data-i18n="btnGuaranteeRefund" data-scroll="#guarantee" type="button">الضمان والاسترداد</button><button class="aBtn" data-i18n="btnOrder" data-scroll="#order" type="button">اطلب الآن</button></div>
-<!-- Sections opened by the buttons above (kept minimal for now) -->
-<div class="sections" id="sections"><section aria-live="polite" class="sectionPanel is-open" id="reviews">
-<div class="sectionInner"><div class="reviews-fake-note">هذه الردود وهمية للتجربة فقط</div><h3 class="sectionTitle" data-i18n="secReviewsTitle">آراء العملاء</h3><div class="reviewsSummary" data-i18n-group="reviewsSummary" id="reviewsSummary">
-<div class="rsLeft">
-<span aria-hidden="true" class="rsStars" id="rsStars"></span>
-<span class="rsAvg" id="rsAvg"></span>
-</div>
-<div class="rsRight" id="rsCount"></div>
-</div><div class="reviewsList" id="reviewsList"></div><button class="reviewsMoreBtn" data-i18n="btnLoadMoreReviews" id="reviewsMore" type="button">عرض المزيد</button><form class="reviewForm" id="reviewForm">
-<div class="rfRateRow">
-<div class="rfRateLabel" data-i18n="rateBeforeComment">قيّم المنتج أولاً</div>
-<div aria-label="Rating" class="starInput" id="rfStars" role="radiogroup">
-<button aria-label="1 star" class="starBtn" data-star="1" type="button">★</button>
-<button aria-label="2 stars" class="starBtn" data-star="2" type="button">★</button>
-<button aria-label="3 stars" class="starBtn" data-star="3" type="button">★</button>
-<button aria-label="4 stars" class="starBtn" data-star="4" type="button">★</button>
-<button aria-label="5 stars" class="starBtn" data-star="5" type="button">★</button>
-<span aria-hidden="true" class="miniSpinner" id="rfStarsSpinner"></span>
-</div>
-<div class="formError" data-i18n="reviewNeedRating" hidden="" id="rfError">يرجى اختيار عدد النجوم قبل إرسال التعليق.</div>
-</div>
-<div class="rfRow">
-<input class="rfInput" data-i18n-placeholder="phName" id="rfName" name="name" placeholder="الاسم" type="text"/>
-<textarea class="rfTextarea" data-i18n-placeholder="phComment" id="rfComment" name="comment" placeholder="اكتب تعليقك هنا..."></textarea>
-</div>
-<div class="formSuccess" data-i18n="reviewSent" hidden="" id="rfSuccess">تم إرسال تقييمك وتعليقك. شكرًا لك!</div>
-<div class="rfActions">
-<button class="rfSubmit" id="rfSubmit" type="submit">
-<span class="rfSubmitText" data-i18n="sendReview">إرسال التعليق</span>
-<span aria-hidden="true" class="btnSpinner"></span>
-</button>
-</div>
-</form></div>
-</section><section aria-live="polite" class="sectionPanel" id="usage">
-<div class="sectionInner">
-<h3 class="sectionTitle" data-i18n="secUsageTitle">طريقة الاستخدام</h3>
-<div class="sectionFixedNote" data-fixed-ar="1">تحذير هذه الادعاءات كاذبة ومضللة الرجاء الحذر جدا وعدم الاخذ بها</div><div class="sectionRich" data-i18n-html="usageHtml"></div></div>
-</section><section aria-live="polite" class="sectionPanel" id="benefits">
-<div class="sectionInner">
-<h3 class="sectionTitle" data-i18n="secBenefitsTitle">فوائد المنتج</h3>
-<div class="sectionFixedNote" data-fixed-ar="1">تحذير هذه الادعاءات كاذبة ومضللة الرجاء الحذر جدا وعدم الاخذ بها</div><div class="sectionRich" data-i18n-html="benefitsHtml"></div></div>
-</section><section aria-live="polite" class="sectionPanel" id="suitable"><div class="sectionInner"><h3 class="sectionTitle" data-i18n="secSuitableTitle">لمن يناسب؟</h3><div class="sectionFixedNote" data-fixed-ar="1">تحذير هذه الادعاءات كاذبة ومضللة الرجاء الحذر جدا وعدم الاخذ بها</div><div class="sectionRich" data-i18n-html="suitableHtml"></div></div></section><section aria-live="polite" class="sectionPanel" id="guarantee">
-<div class="sectionInner"><h3 class="sectionTitle" data-i18n="secGuaranteeTitle">الضمان والاسترداد</h3><div class="policyBox"><p class="policyLead" data-i18n="guarLead">نلتزم بتجربة عادلة وواضحة للعميل.</p><p class="policyText" data-i18n="guar15min">إذا لم تلاحظ المفعول خلال 15 دقيقة من الاستخدام الصحيح في أول تجربة، يمكنك طلب استرداد كامل المبلغ وفق الشروط أدناه.</p><ul class="policyList"><li data-i18n="guar72h">تقديم طلب الاسترداد خلال 72 ساعة من استلام الطلب.</li><li data-i18n="guarUseLimit">استخدام المنتج مرة أو مرتين كحد أقصى (بدون استخدام مفرط).</li><li data-i18n="guarPackage">توفر العبوة الأصلية + رقم الطلب/رقم الهاتف للتحقق.</li><li data-i18n="guarPhotos">إرسال صور واضحة للمنتج والعبوة (للتوثيق فقط).</li><li data-i18n="guarNoTamper">عدم وجود تلف متعمد أو عبث بالمنتج.</li></ul><p class="policyText" data-i18n="guarAfter">بعد قبول الطلب يتم الرد خلال 24 ساعة واسترداد كامل المبلغ.</p><p class="policyText" data-i18n="guarPrivacy">خصوصيتك محفوظة بالكامل، ويتم التعامل مع طلبات الضمان والاسترداد بسرية تامة.</p></div><form class="refundForm" id="refundRequestForm" novalidate=""><h4 class="refundTitle" data-i18n="refundFormTitle">نموذج طلب الاسترداد</h4><p class="refundHint" data-i18n="refundFormHint">املأ البيانات التالية وسنتواصل معك خلال 24 ساعة.</p>
-<label class="fField"><span class="vh" data-i18n="rfName">الاسم</span><input class="fInput" data-i18n-placeholder="phName" id="rfuName" required="" type="text"/></label>
-<label class="fField"><span class="vh" data-i18n="rfPhone">رقم الهاتف</span><input class="fInput" data-i18n-placeholder="phPhone" id="rfuPhone" inputmode="numeric" minlength="10" pattern="[0-9]*" required="" type="tel"/></label>
-<label class="fField"><span class="vh" data-i18n="rfReceived">تاريخ الاستلام</span><input class="fInput" id="rfuReceived" required="" type="date"/></label>
-<label class="fField"><span class="vh" data-i18n="rfReason">سبب طلب الاسترداد</span><textarea class="fTextarea" data-i18n-placeholder="phReason" id="rfuReason" required="" rows="4"></textarea></label>
-<div class="uploadWrap"><div class="uploadLabel" data-i18n="rfPhotos">صور المنتج والعبوة</div><label class="uploadBtn"><span data-i18n="choosePhotos">اختيار الصور</span><input accept="image/*" id="rfuPhotos" multiple="" type="file"/></label><div class="previewGrid" id="rfuPreview"></div></div><div class="formError" data-i18n="refundNeedFields" hidden="" id="rfuError">يرجى تعبئة الحقول المطلوبة.</div><div class="formSuccess" data-i18n="refundSuccess" hidden="" id="rfuSuccess">تم استلام طلب الاسترداد ✅</div><div class="fActions"><button class="primaryBtn" id="rfuSubmit" type="submit"><span data-i18n="sendRefund">إرسال طلب الاسترداد</span><span aria-hidden="true" class="btnSpinner"></span></button></div></form></div>
-</section><section aria-live="polite" class="sectionPanel" id="order">
-<div class="sectionInner"><h3 class="sectionTitle" data-i18n="secOrderTitle">اطلب الآن</h3><p class="trustLine strong" data-i18n="orderTrustLine1">طلبك يتم عبر جهة طبية موثوقة</p><p class="trustLine" data-i18n="orderTrustLine2">نلتزم بالخصوصية التامة، وتأكيد الطلب يتم بسرعة بدون أي تعقيد.</p>
-<form class="orderForm" id="orderForm" novalidate="">
-<label class="fField">
-<span class="vh" data-i18n="ofNameLabel">الاسم الكامل</span>
-<input autocomplete="name" class="fInput" data-i18n-placeholder="phName" id="ofName" required="" type="text"/>
-</label>
-<label class="fField">
-<span class="vh" data-i18n="ofPhoneLabel">رقم الهاتف/واتساب</span>
-<input autocomplete="tel" class="fInput" data-i18n-placeholder="phPhone" id="ofPhone" inputmode="numeric" minlength="10" pattern="[0-9]*" required="" type="tel"/>
-</label>
-<div class="fRow2">
-<label class="fField">
-<span class="vh" data-i18n="ofCountryLabel">الدولة</span>
-<select class="fSelect" id="ofCountry" required="">
-<option data-i18n="countryIL" selected="" value="IL">إسرائيل</option>
-<option data-i18n="countryPS" value="PS">فلسطين</option>
-<option data-i18n="countryJO" value="JO">الأردن</option>
-<option data-i18n="countryEG" value="EG">مصر</option>
-<option data-i18n="countrySA" value="SA">السعودية</option>
-<option data-i18n="countryAE" value="AE">الإمارات</option>
-</select>
-</label>
-<label class="fField">
-<span class="vh" data-i18n="ofCityLabel">المدينة</span>
-<input class="fInput" data-i18n-placeholder="phCity" id="ofCity" required="" type="text"/>
-</label>
-</div>
-<label class="fField fFull">
-<span class="vh" data-i18n="ofAddressLabel">العنوان التفصيلي</span>
-<input class="fInput" data-i18n-placeholder="phAddress" id="ofAddress" required="" type="text"/>
-</label>
-<label class="fField">
-<span class="vh" data-i18n="qtyLabel">الكمية</span>
-<select class="fSelect" id="qtySelect" required=""><option data-i18n="qty1" selected="" value="1">1 عبوة</option><option data-i18n="qty2" value="2">2 عبوتان</option><option data-i18n="qty3" value="3">3 عبوات</option></select>
-</label>
-<div aria-live="polite" class="priceBox" id="priceBox"><span class="priceLabel" data-i18n="totalLabel">السعر الإجمالي</span><span class="priceValue" id="totalPrice">200 ₪</span><span class="priceNote" data-i18n="shippingIncluded">شامل التوصيل</span></div>
-<label class="fField fFull">
-<span class="vh" data-i18n="ofNoteLabel">ملاحظات (اختياري)</span>
-<textarea class="fTextarea" data-i18n-placeholder="phNote" id="ofNote" rows="3"></textarea>
-</label>
-<div class="fActions"><button class="primaryBtn" id="ofSubmit" type="submit"><span data-i18n="confirmOrder">تأكيد الطلب</span><span aria-hidden="true" class="btnSpinner"></span></button></div>
-<p class="trustMini underBtn" data-i18n="orderTrustMini">بياناتك بأمان 🔒  •  تأكيد سريع  •  شحن سري  •  دفع عند الاستلام</p>
-<div class="formSuccess" data-i18n="orderSuccess" hidden="" id="ofSuccess">تم استلام طلبك ✅ سنتواصل معك خلال دقائق.</div>
-</form></div>
-</section></div>
-</section>
-</main>
-<div aria-hidden="true" class="lightbox" id="lightbox">
-<div class="lightbox__backdrop" id="lbBackdrop"></div>
-<div aria-label="Image viewer" aria-modal="true" class="lightbox__panel" role="dialog">
-<button aria-label="Close" class="lightbox__close" id="lbClose">×</button>
-<div class="lightbox__stage" id="lbStage">
-<div class="lightbox__zoom">
-<img alt="" id="lbImg"/>
-</div>
-</div>
-<div aria-label="Viewer thumbnails" class="lightbox__thumbs" id="lbThumbs"></div>
-</div>
-</div>
-<!-- Rating popup -->
-<div aria-hidden="true" class="srModal" id="srModal">
-<div class="srBackdrop" data-sr-close=""></div>
-<div aria-label="Rating confirmation" aria-modal="true" class="srBox" role="dialog">
-<div class="srTitle" data-i18n="rateThanksTitle">تم التقييم</div>
-<div class="srText" data-i18n="rateThanksText" id="srText">شكرًا لك! تم استلام تقييمك.</div>
-<button class="srOk" data-i18n="okBtn" data-sr-close="" type="button">حسنًا</button>
-</div>
-</div>
-<script defer="" src="script.js?v=11"></script>
-<footer class="siteFooter"><div class="siteFooter__inner" data-i18n="footerRights">جميع الحقوق محفوظة لدى مركز الارتقاء الطبي</div></footer><div aria-hidden="true" class="langOverlay" id="langOverlay">
-<div aria-live="polite" class="langOverlay__card" role="status">
-<span aria-hidden="true" class="langOverlay__spinner"></span>
-<div class="langOverlay__text" id="langOverlayText">جارٍ تطبيق اللغة…</div>
-</div>
-</div></body>
-</html>
