@@ -1,143 +1,0 @@
-<!doctype html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <title>Medical Elevation Center</title>
-  <link rel="preload" as="image" href="assets/slider/h1.jpeg">
-  <link rel="stylesheet" href="style.css?v=11">
-</head>
-<body>
-  <header class="heroHeader" role="banner">
-    <img class="heroHeader__img" src="assets/slider/h1.jpeg" alt="Medical Elevation Center header">
-    <div class="heroHeader__fade" aria-hidden="true"></div>
-  </header>
-
-  <nav class="langbar" aria-label="Language selector">
-    <button class="langchip is-active" data-lang="ar" aria-pressed="true">عربي</button>
-    <button class="langchip" data-lang="en" aria-pressed="false">English</button>
-    <button class="langchip" data-lang="he" aria-pressed="false">עברית</button>
-  </nav>
-
-  <main class="page">
-    <h1 class="pageTitle" data-i18n="title">مركز الارتقاء الطبي</h1>
-    <p class="pageText" data-i18n="subtitle">رعاية طبية حديثة بثقة وخصوصية.</p>
-
-    <section class="slider" aria-label="Image slider">
-      <div class="slider__frame" id="sliderFrame">
-        <div class="slider__track" id="sliderTrack"></div>
-
-        <!-- Rating overlay (top-right) -->
-        <div class="srRate" id="srRate" data-avg="4.5" aria-label="Rate product">
-          <button type="button" class="srStar" data-v="1" aria-label="1 star">
-            <span class="starIcon" aria-hidden="true">
-              <svg class="starBase" viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z"/></svg>
-              <svg class="starFill" viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z"/></svg>
-            </span>
-          </button>
-          <button type="button" class="srStar" data-v="2" aria-label="2 stars">
-            <span class="starIcon" aria-hidden="true">
-              <svg class="starBase" viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z"/></svg>
-              <svg class="starFill" viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z"/></svg>
-            </span>
-          </button>
-          <button type="button" class="srStar" data-v="3" aria-label="3 stars">
-            <span class="starIcon" aria-hidden="true">
-              <svg class="starBase" viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z"/></svg>
-              <svg class="starFill" viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z"/></svg>
-            </span>
-          </button>
-          <button type="button" class="srStar" data-v="4" aria-label="4 stars">
-            <span class="starIcon" aria-hidden="true">
-              <svg class="starBase" viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z"/></svg>
-              <svg class="starFill" viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z"/></svg>
-            </span>
-          </button>
-          <button type="button" class="srStar" data-v="5" aria-label="5 stars">
-            <span class="starIcon" aria-hidden="true">
-              <svg class="starBase" viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z"/></svg>
-              <svg class="starFill" viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z"/></svg>
-            </span>
-          </button>
-          <span class="srAvg" aria-label="Average rating">4.5</span>
-        </div>
-
-        <button class="slider__nav slider__prev" id="prevBtn" aria-label="Previous image">‹</button>
-        <button class="slider__nav slider__next" id="nextBtn" aria-label="Next image">›</button>
-
-        <div class="slider__dots" id="dots" aria-label="Slider pagination"></div>
-      </div>
-
-
-
-      <div class="slider__thumbs" id="thumbs" aria-label="Thumbnails"></div>
-
-      <div class="sliderBadges" aria-label="Highlights">
-        <span class="badgePill"><span class="badgeIcon badgeIcon--cod" aria-hidden="true">💵</span><span data-i18n="badgeCod">الدفع عند الاستلام</span></span>
-        <span class="badgePill"><span class="badgeIcon badgeIcon--privacy" aria-hidden="true">🔒</span><span data-i18n="badgePrivacy">خصوصية تامة</span></span>
-        <span class="badgePill"><span class="badgeIcon badgeIcon--guarantee" aria-hidden="true">🛡️</span><span data-i18n="badgeGuarantee">ضمان واسترداد</span></span>
-      </div>
-</section>
-
-    <!-- Customer reviews (shown under the slider) -->
-    <section class="reviews" aria-label="Customer reviews">
-      <div class="reviews__head">
-        <h2 class="reviews__title" data-i18n="reviewsTitle">آراء العملاء</h2>
-        <p class="reviews__sub" data-i18n="reviewsSubtitle">تقييمات حقيقية وتجارب مختصرة من العملاء.</p>
-      </div>
-
-      <div class="reviews__list" id="reviewsList" aria-live="polite"></div>
-
-      <div class="reviews__actions">
-        <button type="button" class="btnGhost" id="reviewsMore" data-i18n="reviewsMore">عرض المزيد</button>
-        <button type="button" class="btnPrimary" id="reviewsAdd" data-i18n="reviewsAdd">إضافة رأيك</button>
-      </div>
-
-      <form class="reviewForm" id="reviewForm" hidden>
-        <div class="reviewForm__stars" aria-label="Rate with stars">
-          <button type="button" class="rfStar" data-v="1" aria-label="1 star">★</button>
-          <button type="button" class="rfStar" data-v="2" aria-label="2 stars">★</button>
-          <button type="button" class="rfStar" data-v="3" aria-label="3 stars">★</button>
-          <button type="button" class="rfStar" data-v="4" aria-label="4 stars">★</button>
-          <button type="button" class="rfStar" data-v="5" aria-label="5 stars">★</button>
-          <span class="rfHint" data-i18n="reviewsRateHint">اختر تقييمك</span>
-        </div>
-        <textarea class="reviewForm__input" id="reviewText" rows="3" maxlength="220" data-i18n-placeholder="reviewsPlaceholder" placeholder="اكتب رأيك باختصار..."></textarea>
-        <div class="reviewForm__footer">
-          <span class="rfCount" id="rfCount">0/220</span>
-          <button type="submit" class="btnPrimary" id="reviewSubmit" data-i18n="reviewsSubmit">إرسال</button>
-        </div>
-      </form>
-    </section>
-  </main>
-
-  <div class="lightbox" id="lightbox" aria-hidden="true">
-    <div class="lightbox__backdrop" id="lbBackdrop"></div>
-
-    <div class="lightbox__panel" role="dialog" aria-modal="true" aria-label="Image viewer">
-      <button class="lightbox__close" id="lbClose" aria-label="Close">×</button>
-
-      <div class="lightbox__stage" id="lbStage">
-        <div class="lightbox__zoom">
-          <img id="lbImg" alt="" />
-        </div>
-      </div>
-
-      <div class="lightbox__thumbs" id="lbThumbs" aria-label="Viewer thumbnails"></div>
-    </div>
-  </div>
-
-  
-  <!-- Rating popup -->
-  <div class="srModal" id="srModal" aria-hidden="true">
-    <div class="srBackdrop" data-sr-close></div>
-    <div class="srBox" role="dialog" aria-modal="true" aria-label="Rating confirmation">
-      <div class="srTitle" data-i18n="rateThanksTitle">تم التقييم</div>
-      <div class="srText" id="srText" data-i18n="rateThanksText">شكرًا لك! تم استلام تقييمك.</div>
-      <button type="button" class="srOk" data-sr-close data-i18n="okBtn">حسنًا</button>
-    </div>
-  </div>
-
-  <script src="script.js?v=11" defer></script>
-</body>
-</html>
